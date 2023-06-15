@@ -1,11 +1,16 @@
 import './App.css';
+import Header from "./Header.js";
 
 function App() {
   return (
     <div className="App">
-      YOUTUBE CLONE
+
 
      {/* HEADER */} 
+     <Header />
+     {/* SIDEBAR */}
+     {/* RecommendedVideos */}
+
     </div>
   );
 }
