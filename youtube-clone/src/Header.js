@@ -25,12 +25,12 @@ export default function Header() {
         </div>
         
         <div className='header-input'>
-            <input type="text" />
-            <SearchIcon />
+            <input placeholder="Suchen" type="text" />
+            <SearchIcon className='header-inputButton'/>
         </div>
 
        <div className='header-icons'>
-            <VideoCallIcon />
+            <VideoCallIcon className='header-icon' />
             <AppsIcon />
             <NotificationsIcon />
             <Avatar 
