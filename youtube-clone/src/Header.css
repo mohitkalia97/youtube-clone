@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.header-logo {
+    height: 25px;
+    object-fit: contain;
+    margin-left: 20px;
+}
+
+.header-input {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    border: 1px solid black;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-input > input {  /*  "> input" is the child of header-input, the textfield */
+    flex: 1;
+    border: none;
+}
