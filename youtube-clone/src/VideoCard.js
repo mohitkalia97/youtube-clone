@@ -7,9 +7,11 @@ export default function VideoCard({ image, title, channel, views, timestamp, cha
   return (
     <div className='videoCard'>
         <img className='videoCard-thumbnail' src={image} alt="" />
-        <div className="video-info">
-            <Avatar className='videoCard-avatar' alt={channel} src={channelImage} />
-            <div className="video-text">
+        <div className="videoCard-info">
+            <Avatar className='videoCard-avatar' 
+                    alt={channel} 
+                    src={channelImage} />
+            <div className="videoCard-text">
                 <h4>{title}</h4>
                 <p>{channel}</p>
                 <p>

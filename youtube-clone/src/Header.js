@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import "./Header.css";
 
@@ -8,10 +8,12 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import AppsIcon from '@mui/icons-material/Apps';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Avatar from '@mui/material/Avatar';
-
-
+import { Link } from "react-router-dom";
 
 export default function Header() {
+
+  const [inputSearch, setInputSearch] = useState("");
+
   return (
     <div className='header'>
 
@@ -25,8 +27,10 @@ export default function Header() {
         </div>
         
         <div className='header-input'>
-            <input placeholder="Suchen" type="text" />
-            <SearchIcon className='header-inputButton'/>
+            <input onChange={e => setInputSearch(e.target.value)} value={inputSearch} placeholder="Suchen" type="text" />
+            <Link to={`/search/${inputSearch}`}>
+                <SearchIcon className='header-inputButton'/>
+            </Link>
         </div>
 
        <div className='header-icons'>
