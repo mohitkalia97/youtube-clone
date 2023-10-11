@@ -2,6 +2,7 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from './HomePage';
 import SearchPage from './SearchPage';
+import React from 'react';
 
 function App() {
   return (
