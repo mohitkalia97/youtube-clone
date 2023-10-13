@@ -1,18 +1,23 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 import "./Header.css";
 
+import React from 'react';
 import MenuIcon from '@mui/icons-material/MenuSharp';
 import SearchIcon from '@mui/icons-material/Search';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import AppsIcon from '@mui/icons-material/Apps';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import Avatar from '@mui/material/Avatar';
+//import Avatar from '@mui/material/Avatar';
+//import LoginIcon from '@mui/icons-material/Login';       //conditional
+//import LogoutIcon from '@mui/icons-material/Logout';     //conditional 
+
 import { Link } from "react-router-dom";
 
 export default function Header() {
 
   const [inputSearch, setInputSearch] = useState("");
+
 
   return (
     <div className='header'>
@@ -39,10 +44,13 @@ export default function Header() {
             <VideoCallIcon className='header-icon' />
             <AppsIcon />
             <NotificationsIcon />
-            <Avatar 
+            {/* <Avatar 
                 alt="Mohit Kalia"
                 src="https://avatars.githubusercontent.com/u/102523042?s=400&u=0db4cdb4509217c74738029540cef5d17e773e56&v=4"
-            />
+            /> */}
+            <Link to={`/login`}>
+                Login
+            </Link>
        </div>
 
     </div>

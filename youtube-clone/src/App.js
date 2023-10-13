@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from './HomePage';
 import SearchPage from './SearchPage';
 import React from 'react';
+import Login from './Login';
+import Register from './Register';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Route path='/search/:searchTerm' element={<SearchPage />}/>
 
         <Route path='/' element={ <HomePage/> } />
+        <Route path='/login' element={ <Login/> } />
+        <Route path='/register' element={ <Register/> } />
       </Routes> 
     </Router>
     </div>
