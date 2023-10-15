@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 using youtube_clone_backend.Areas.Identity.Data;
 using youtube_clone_backend.Data;
 using youtube_clone_backend.Models;
@@ -16,10 +17,12 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
 builder.Services.AddDbContext<UserContext>(options =>
 {
-    options.UseSqlServer("Server=MOHITPC; Database=youtubeclonedb;Trusted_Connection=True;TrustServerCertificate=True");
+        options.UseSqlServer("Server=MOHITPC; Database=youtube-clone-backend;User ID=mohitsql;Password=;TrustServerCertificate=True;Trusted_Connection=True;");
 });
+
 
 var app = builder.Build();
 
@@ -38,6 +41,12 @@ app.UseRouting();
 app.UseAuthentication();;
 
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapRazorPages();
+});
+
 
 app.MapControllerRoute(
     name: "default",
