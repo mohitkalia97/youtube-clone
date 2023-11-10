@@ -11516,19 +11516,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mohit\\.nuget\\packages\\": {}
+    "C:\\Users\\MOH\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mohit\\Desktop\\Coding\\Projects\\youtube-clone\\backend\\youtube-clone-backend\\youtube-clone-backend\\youtube-clone-backend.csproj",
+      "projectUniqueName": "C:\\Users\\MOH\\Desktop\\Privat\\youtube-clone\\backend\\youtube-clone-backend\\youtube-clone-backend\\youtube-clone-backend.csproj",
       "projectName": "youtube-clone-backend",
-      "projectPath": "C:\\Users\\Mohit\\Desktop\\Coding\\Projects\\youtube-clone\\backend\\youtube-clone-backend\\youtube-clone-backend\\youtube-clone-backend.csproj",
-      "packagesPath": "C:\\Users\\Mohit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mohit\\Desktop\\Coding\\Projects\\youtube-clone\\backend\\youtube-clone-backend\\youtube-clone-backend\\obj\\",
+      "projectPath": "C:\\Users\\MOH\\Desktop\\Privat\\youtube-clone\\backend\\youtube-clone-backend\\youtube-clone-backend\\youtube-clone-backend.csproj",
+      "packagesPath": "C:\\Users\\MOH\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MOH\\Desktop\\Privat\\youtube-clone\\backend\\youtube-clone-backend\\youtube-clone-backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mohit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MOH\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11600,7 +11600,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

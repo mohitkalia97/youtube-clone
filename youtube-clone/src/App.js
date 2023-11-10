@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import HomePage from './HomePage';
 import SearchPage from './SearchPage';
 import React from 'react';
@@ -14,7 +14,7 @@ function App() {
         <Route path='/search/:searchTerm' element={<SearchPage />}/>
 
         <Route path='/' element={ <HomePage/> } />
-        <Route path='/login' element={ <Login/> } />
+     
         <Route path='/register' element={ <Register/> } />
       </Routes> 
     </Router>

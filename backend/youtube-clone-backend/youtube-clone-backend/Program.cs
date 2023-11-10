@@ -20,7 +20,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<UserContext>(options =>
 {
-        options.UseSqlServer("Server=MOHITPC; Database=youtube-clone-backend;User ID=mohitsql;Password=;TrustServerCertificate=True;Trusted_Connection=True;");
+        options.UseSqlServer("Server=MOHITPC; Database=youtube-clone-backend;User ID=SMCAT\\\\MOH;Password=;TrustServerCertificate=True;Trusted_Connection=True;");
 });
 
 

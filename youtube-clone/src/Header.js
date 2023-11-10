@@ -48,7 +48,7 @@ export default function Header() {
                 alt="Mohit Kalia"
                 src="https://avatars.githubusercontent.com/u/102523042?s=400&u=0db4cdb4509217c74738029540cef5d17e773e56&v=4"
             /> */}
-            <Link to={`/login`}>
+            <Link to={`https://localhost:7067/identity/account/login`}>
                 Login
             </Link>
        </div>

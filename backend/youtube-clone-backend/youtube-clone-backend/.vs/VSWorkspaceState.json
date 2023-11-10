@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Areas",
+    "\\bin",
+    "\\Controllers",
+    "\\Migrations",
+    "\\Models",
+    "\\Views",
+    "\\wwwroot"
   ],
   "SelectedNode": "\\Program.cs",
   "PreviewInSolutionExplorer": false
