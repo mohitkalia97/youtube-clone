@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using youtube_clone_backend.Areas.Identity.Data;
 using youtube_clone_backend.Models;
 
 namespace youtube_clone_backend.Controllers
@@ -9,25 +11,34 @@ namespace youtube_clone_backend.Controllers
     [ApiController]
     public class RegistrationController : ControllerBase
     {
-        private const string connectionStringName = "youtube_clone_backendDbContextConnection";
-        private readonly IConfiguration _configuration;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public RegistrationController(IConfiguration configuration)
+        public RegistrationController(UserManager<ApplicationUser> userManager)
         {
-            _configuration = configuration;
+            _userManager = userManager;
         }
 
         [HttpPost]
         [Route("registration")]
-        public string registration(User registration)
+        public async Task<IActionResult> Registration(User registration)
         {
-            SqlConnection con = new SqlConnection(_configuration.GetConnectionString(connectionStringName).ToString());
-            SqlCommand cmd = new SqlCommand("INSERT INTO Registration(Username, Password) VALUES('" + registration.username + "','" + registration.password, con );
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            int i = cmd.ExecuteNonQuery();
-            return i > 0 ? "Data inserted" : "Error inserting data";
-           
+            var user = new ApplicationUser { Email = registration.Email };
+            var result = await _userManager.CreateAsync(user, registration.password);
+
+            if (result.Succeeded)
+            {
+
+                return Ok("User registered successfully");
+            }
+
+            foreach (var error in result.Errors)
+                ModelState.AddModelError("", error.Description);
+
+            return BadRequest(ModelState);
         }
-
     }
+
 }
