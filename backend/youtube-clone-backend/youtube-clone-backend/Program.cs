@@ -2,26 +2,27 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 using youtube_clone_backend.Areas.Identity.Data;
-using youtube_clone_backend.Data;
+//using youtube_clone_backend.Data;
 using youtube_clone_backend.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("youtube_clone_backendDbContextConnection") ?? throw new InvalidOperationException("Connection string 'youtube_clone_backendDbContextConnection' not found.");
 
-builder.Services.AddDbContext<youtube_clone_backendDbContext>(options =>
-    options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<UserContext>(options =>
+{
+    options.UseSqlServer(connectionString);
+});
+//builder.Services.AddDbContext<youtube_clone_backendDbContext>(options =>
+//    options.UseSqlServer(connectionString));
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<youtube_clone_backendDbContext>();
+    .AddEntityFrameworkStores<UserContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<UserContext>(options =>
-{
-        options.UseSqlServer("Server=MOHITPC; Database=youtube-clone-backend;User ID=SMCAT\\\\MOH;Password=;TrustServerCertificate=True;Trusted_Connection=True;");
-});
+
 
 
 var app = builder.Build();
