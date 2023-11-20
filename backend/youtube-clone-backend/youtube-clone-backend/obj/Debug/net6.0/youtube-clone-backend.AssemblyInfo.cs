@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("youtube-clone-backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+157369ee57806603713d5c104163460bd802a4ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("youtube-clone-backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("youtube-clone-backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

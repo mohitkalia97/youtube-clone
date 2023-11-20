@@ -20,6 +20,5 @@ export default function VideoCard({ image, title, channel, views, timestamp, cha
             </div>
         </div>
     </div>
-
   )
 }

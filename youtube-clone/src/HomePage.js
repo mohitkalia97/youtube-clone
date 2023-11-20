@@ -4,6 +4,8 @@ import Sidebar from './Sidebar'
 import RecommendedVideos from './RecommendedVideos'
 
 export default function HomePage() {
+
+
   return (
     <>
         <Header />
@@ -12,5 +14,6 @@ export default function HomePage() {
         <RecommendedVideos />
         </div> 
     </>
-  )
+  )  
 }
+

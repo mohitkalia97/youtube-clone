@@ -8,6 +8,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import AppsIcon from '@mui/icons-material/Apps';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
 import { useAuth0 } from "@auth0/auth0-react";
 
 //import Avatar from '@mui/material/Avatar';
@@ -17,18 +19,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 
 export default function Header() {
-
   const [inputSearch, setInputSearch] = useState("");
-  
-  const LoginButton = () => {
-    const { loginWithRedirect } = useAuth0();
-  
-    return <button onClick={() => loginWithRedirect()}>Log In</button>;
-  };
-
+  const { isLoading, error } = useAuth0();
   return (
     <div className='header'>
-
         <div className='header-left'>
             <MenuIcon />
             <Link to={"/"}>
@@ -51,12 +45,14 @@ export default function Header() {
             <VideoCallIcon className='header-icon' />
             <AppsIcon />
             <NotificationsIcon />
-            {/* <Avatar 
-                alt="Mohit Kalia"
-                src="https://avatars.githubusercontent.com/u/102523042?s=400&u=0db4cdb4509217c74738029540cef5d17e773e56&v=4"
-            /> */}
-
+            {error && <p>Authentication Error</p>}
+            {!error && isLoading && <p>Loading...</p>}
+            {!error && !isLoading &&(
+            <>
             <LoginButton />
+            <LogoutButton />
+            </>
+            )}
        </div>
 
     </div>

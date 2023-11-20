@@ -548,3 +548,4 @@ C:\Users\MOH\Desktop\Privat\youtube-clone\backend\youtube-clone-backend\youtube-
 C:\Users\MOH\Desktop\Privat\youtube-clone\backend\youtube-clone-backend\youtube-clone-backend\obj\Debug\net6.0\youtube-clone-backend.csproj.CopyComplete
 C:\Users\MOH\Desktop\Privat\youtube-clone\backend\youtube-clone-backend\youtube-clone-backend\obj\Debug\net6.0\youtube-clone-backend.genruntimeconfig.cache
 C:\Users\MOH\Desktop\Privat\youtube-clone\backend\youtube-clone-backend\youtube-clone-backend\obj\Debug\net6.0\ref\youtube-clone-backend.dll
+C:\Users\MOH\Desktop\Privat\youtube-clone\backend\youtube-clone-backend\youtube-clone-backend\obj\Debug\net6.0\youtube-clone-backend.sourcelink.json
